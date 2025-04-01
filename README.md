@@ -41,7 +41,7 @@ This is an Arduino library for playing GIFs on the ssd1306 display. The library 
 
 ### 概述
 
-这是一个适用于ssd1306的GIF播放Adruino库，本库自带添加工具，可以将取模好的GIF图添加到库中。添加完后压缩导入Adruino即可。
+这是一个适用于ssd1306的GIF播放Arduino库，本库自带添加工具，可以将取模好的GIF图添加到库中。添加完后压缩导入Arduino即可。
 
 ### 文件结构
 
