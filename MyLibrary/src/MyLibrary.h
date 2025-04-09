@@ -9,6 +9,10 @@
 #include "gif_frames.h"  // 包含帧数据头文件
 
 enum class DisplayModel {
+    SNEEZE,
+    EYEBROW,
+    ESCAPE,
+    BEADY,
     DANCE,
     SNOW, 
     BATH,

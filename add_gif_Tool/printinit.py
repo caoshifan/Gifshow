@@ -1,12 +1,10 @@
 import os
 import re
 array_names = []
+
 def rename_array_in_file(file_path,array_names):
     """
-    改进版数组重命名函数，支持：
-    - 跨行数组定义
-    - 带前置注释/空格的声明
-    - Windows换行符
+        重命名.c文件数组
     """
     # 增强型正则表达式（移除行首锚定，支持多行）
 
@@ -69,6 +67,8 @@ def process_folder(folder_path):
     return init_code
 
 def update_file(path):
+    global array_names
+    array_names= []
     style_name = os.path.basename(path.rstrip('/'))
     parent_folder = os.path.dirname(os.path.dirname(path))
     print(f"上一层文件夹路径: {parent_folder}")
@@ -143,6 +143,8 @@ def update_file(path):
         print(f"找不到文件 {filename}")
     except Exception as e:
         print(f"发生错误: {str(e)}")
+
+
 
 
 
