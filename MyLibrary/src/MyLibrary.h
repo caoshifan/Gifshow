@@ -22,7 +22,7 @@ enum class DisplayModel {
 class MyLibrary {
 public:
     MyLibrary(int width, int height, int resetPin);
-    void begin();
+    void begin(int roation = -1);
     void show(DisplayModel model);             // 播放GIF动画
     void update();
     void setFrameDelay(int delayMs); 

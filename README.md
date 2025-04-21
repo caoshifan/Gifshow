@@ -70,3 +70,5 @@ This is an Arduino library for playing GIFs on the ssd1306 display. The library 
 - 🔄 集成分解取模
 - 🔄 集成压缩
 
+Modification Log:
+2025/4/21: 修改begin函数  begin函数传参rotation,参数用于display.setRotation(rotation)。默认值为-1，画满不做转换，传入2则画面旋转180°（上下颠倒）

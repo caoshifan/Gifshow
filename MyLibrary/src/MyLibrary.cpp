@@ -434,10 +434,13 @@ const unsigned char* bath_gif_frames[] = {
 };
 const int bath_total_frames = sizeof(bath_gif_frames) / sizeof(bath_gif_frames[0]);
 
-void MyLibrary::begin() {
+void MyLibrary::begin(int roation) {
     if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
         Serial.println(F("SSD1306 allocation failed"));
         for (;;);
+    }
+    if (roation != -1) {
+        display.setRotation(roation);
     }
     display.clearDisplay();
     display.display();
