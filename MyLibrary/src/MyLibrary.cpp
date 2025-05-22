@@ -463,6 +463,19 @@ void MyLibrary::show(DisplayModel model) {
     }
 }
 
+// turnOff Order
+void MyLibrary::turnOffScreen() {
+    // 关闭显示命令 (0xAE)
+    display.ssd1306_command(SSD1306_DISPLAYOFF);
+}
+// turnon Order
+void MyLibrary::turnOnScreen() {
+    // 开启显示命令 
+    display.ssd1306_command(SSD1306_DISPLAYON);
+    display.clearDisplay();  // 清除残留画面
+    display.display();       // 确保刷新
+}
+
 void MyLibrary::update() {
     unsigned long currentTime = millis();
     

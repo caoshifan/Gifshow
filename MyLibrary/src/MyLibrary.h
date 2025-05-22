@@ -26,6 +26,8 @@ public:
     void show(DisplayModel model);             // 播放GIF动画
     void update();
     void setFrameDelay(int delayMs); 
+    void turnOffScreen(); 
+    void turnOnScreen();
     int getFrameDelay() const;// 设置帧间隔时间
 
 private:
